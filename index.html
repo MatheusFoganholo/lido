@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>
+      Calculadora de Infusão de Lidocaína | Lidocaine Infusion Calculator
+    </title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#f3f4fd" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/icons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#f3f4fd" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Infusão de Lidocaína</h1>
+      <main id="content">
+        <img src="./img/cat.svg" alt="Cat" />
+
+        <label for="kg">Peso (kg)</label>
+        <input type="number" name="kg" id="kg" min="0.1" />
+
+        <label for="dose">Dose (mg)</label>
+        <input type="number" name="dose" id="dose" min="0.02" max="0.08" />
+
+        <label for="mlPerHour">Taxa de Infusão (ml/h)</label>
+        <input type="number" name="mlPerHour" id="mlPerHour" min="0.1" />
+
+        <label id="solution-quantity">Qtd. de solução (ml)</label>
+        <div id="radios">
+          <label>
+            <input
+              type="radio"
+              name="solution-quantity"
+              value="250"
+              checked
+            />250
+          </label>
+          <label>
+            <input type="radio" name="solution-quantity" value="500" />500
+          </label>
+          <label>
+            <input type="radio" name="solution-quantity" value="1000" />1000
+          </label>
+        </div>
+
+        <label id="lido-concentration-label">Concentração da lidocaína</label>
+        <div id="radios">
+          <label>
+            <input type="radio" name="lido-concentration" value="1" checked />1%
+          </label>
+          <label>
+            <input type="radio" name="lido-concentration" value="2" />2%
+          </label>
+        </div>
+
+        <button type="button" id="calculate">Calcular</button>
+
+        <label id="lidoMlLabel">Quantidade de lidocaína (ml)</label>
+        <input type="text" id="lidoMlResult" readonly />
+      </main>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
